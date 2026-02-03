@@ -1,0 +1,166 @@
+/* Reset básico */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: 'Inter', sans-serif; line-height: 1.6; color: #1B2A49;}
+a {text-decoration: none;}
+img {max-width: 100%; display: block;}
+section {padding: 60px 20px;}
+
+/* Cores */
+:root {
+  --azul-escuro: #1B2A49;
+  --azul-medio: #3A4F7A;
+  --azul-claro: #E6EDF7;
+  --amarelo: #F9C311;
+  --branco: #FFFFFF;
+  --cinza-claro: #F8F8F8;
+}
+
+/* Botões */
+.btn {
+  background-color: var(--amarelo);
+  color: var(--azul-escuro);
+  padding: 15px 30px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+}
+
+/* HERO */
+.hero {
+ 
+  background: url('/assets/img/bnn.ofc.jpeg');
+  color: var(--branco);
+  text-align: center;
+  padding: 120px 20px;
+  height: 800px;
+}
+
+.hero h1{
+    margin-top: 200px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.hero p{
+    /* text-align: center; */
+    /* display: flex;
+    align-items: center; */
+    width: 600px;
+}
+
+/* FAIXA DE DESTAQUE */
+.highlight {
+  background-color: var(--amarelo);
+  color: var(--azul-escuro);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+.highlight div {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+.highlight div i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* PROPÓSITO */
+.purpose {
+  background-color: var(--azul-claro); /* cor de fundo */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  color: var(--azul-escuro); /* texto escuro */
+}
+.purpose-text {flex: 1 1 400px;}
+.purpose img {flex: 1 1 400px; border-radius: 12px;}
+
+/* METODOLOGIA */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: var(--branco); /* fundo branco para cards */
+  color: var(--azul-escuro);
+  padding: 30px 20px;
+  border-radius: 12px;
+  flex: 1 1 250px;
+  min-width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* DIFERENCIAL */
+.differential {
+  background-color: var(--cinza-claro); /* fundo cinza leve */
+  color: var(--azul-escuro);
+}
+
+/* FOCO ESTRATÉGICO */
+.focus {
+  background-color: var(--branco);
+  color: var(--azul-escuro);
+}
+.focus .cards .card {
+  background-color: var(--azul-claro); /* cards dentro do foco */
+  color: var(--azul-escuro);
+}
+
+/* VANTAGENS DO FOCO */
+.advantages {
+  background-color: var(--azul-medio); /* bloco azul médio */
+  color: var(--branco);
+}
+
+/* REDAÇÃO COMO DIFERENCIAL */
+.writing {
+  background-color: var(--amarelo); /* destaque amarelo */
+  color: var(--azul-escuro);
+}
+
+/* REDAÇÃO COMO VANTAGEM COMPETITIVA */
+.writing-advantage {
+  background-color: var(--cinza-claro);
+  color: var(--azul-escuro);
+}
+
+/* MENTORIA INDIVIDUAL */
+.mentoria {
+  background-color: var(--azul-claro);
+  color: var(--azul-escuro);
+}
+
+/* CTA final */
+.cta {
+  background-color: var(--amarelo);
+  color: var(--azul-escuro);
+  text-align: center;
+  padding: 80px 20px;
+}
+.cta .btn {font-size: 1.2rem;}
+
+/* Footer */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px){
+  .hero h1 {font-size: 2rem;}
+  .hero p {font-size: 1rem;}
+  .purpose {flex-direction: column;}
+  .highlight {flex-direction: column;}
+  .cards {flex-direction: column;}
+}
