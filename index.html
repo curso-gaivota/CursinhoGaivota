@@ -1,150 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cursinho Pré-Vestibular Gaivota</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Cursinho Pré-Vestibular Gaivota</h1>
-  <p>Preparação sólida, humana e estratégica para o ENEM e os principais vestibulares.
-Mais do que um cursinho, um projeto educacional completo para quem quer competir por vagas em universidades públicas, instituições renomadas e bolsas integrais.</p>
-  <a href="#matricula" class="btn">Quero estudar no Gaivota</a>
-</section>
+  <!-- MENU -->
+  <header class="header">
+    <div class="logo">Gaivota</div>
 
-<!-- FAIXA DE DESTAQUE -->
-<section class="highlight">
-  <div><i class="fas fa-lightbulb"></i><p>Ensino estratégico</p></div>
-  <div><i class="fas fa-user-check"></i><p>Acompanhamento individual</p></div>
-  <div><i class="fas fa-book"></i><p>Foco no que mais pontua</p></div>
-</section>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#home">Início</a></li>
+        <li><a href="pre-vestibular.html">O Curso</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
 
-<!-- PROPÓSITO -->
-<section class="purpose">
-  <div class="purpose-text">
-    <h2>Nosso objetivo</h2>
-    <p>Desenvolver as competências fundamentais exigidas no ENEM e nos principais vestibulares por meio de uma preparação sólida, humana e estratégica.
-
-No Cursinho Gaivota, o estudante desenvolve leitura crítica, escrita argumentativa e base matemática essencial, além de autonomia, segurança e estratégia para o dia da prova.
-
-Aqui, o aluno entende o que estuda, 
-por que estuda e como evoluir.</p>
-  </div>
-  <img src="./assets/img/objetivo.png" alt="Alunos estudando juntos">
-</section>
-
-<!-- METODOLOGIA -->
-<section class="cards">
-  <div class="card">
-    <h3>Aulas dialogadas</h3>
-    <p>Estudantes participam ativamente e aprendem de forma prática.</p>
-  </div>
-  <div class="card">
-    <h3>Exercícios comentados</h3>
-    <p>Prática constante com feedback detalhado.</p>
-  </div>
-  <div class="card">
-    <h3>Produção contínua</h3>
-    <p>Redação e exercícios estruturados para evolução consistente.</p>
-  </div>
-  <div class="card">
-    <h3>Correção humanizada</h3>
-    <p>Avaliação próxima e individual que transforma aprendizado em resultado.</p>
-  </div>
-</section>
-
-<!-- DIFERENCIAL -->
-<section class="differential">
-  <h2>Nosso diferencial pedagógico</h2>
-  <ul>
-    <li>Linguagem acessível e direta</li>
-    <li>Conteúdo contextualizado com o ENEM</li>
-    <li>Avaliação formativa (foco em evolução real)</li>
-    <li>Acompanhamento próximo e individualizado</li>
-  </ul>
-</section>
-
-<!-- FOCO ESTRATÉGICO -->
-<section class="focus">
-  <h2>Menos matérias. Mais estratégia. Mais resultado.</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>📘 Português</h3>
-      <p>Porque saber ler é essencial para entender qualquer prova. 
-        Quem domina interpretação erra menos, ganha tempo e responde com mais segurança.</p>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
     </div>
-    <div class="card">
-      <h3>✍️ Redação</h3>
-      <p>Porque a redação decide vagas e bolsas. 
-        É a única prova em que você constrói sua própria nota - e um bom método faz toda a diferença..</p>
+  </header>
+
+  <!-- HERO HOME -->
+  <section class="home-hero" id="home">
+    <div class="home-overlay"></div>
+
+    <div class="home-content">
+      <h1>Cursinho Pré-Vestibular Gaivota</h1>
+      <p>
+        Preparação sólida, humana e estratégica para o ENEM e os principais vestibulares.
+      </p>
+
+      <div class="home-buttons">
+        <a href="pre-vestibular.html" class="btn-primary">
+          Conhecer o Pré-Vestibular
+        </a>
+
+        <a href="https://www.outrosite.com" target="_blank" class="btn-secondary">
+          Outro projeto
+        </a>
+      </div>
     </div>
-    <div class="card">
-      <h3>🧮 Matemática</h3>
-      <p>É a área com maior peso no ENEM e alto poder de pontuação. 
-        Com uma base bem construída, o aluno evolui rápido e ganha confiança..</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- VANTAGENS DO FOCO -->
-<section class="advantages">
-  <h2>Por que essa estratégia funciona?</h2>
-  <ul>
-    <li>Mais tempo para aprofundar o que realmente cai</li>
-    <li>Aprendizado consistente, sem sobrecarga</li>
-    <li>Evolução mais rápida e mensurável</li>
-    <li>Estratégia inteligente para quem quer competir de verdade</li>
-  </ul>
-</section>
+  <!-- FOOTER SIMPLES -->
+  <footer class="footer" id="contato">
+    <p>© 2026 — Cursinho Pré-Vestibular Gaivota</p>
+  </footer>
 
-<!-- REDAÇÃO COMO DIFERENCIAL -->
-<section class="writing">
-  <h2>Redação com método. Evolução com reescrita.</h2>
-  <p>Nosso diferencial está em um método de reescrita orientada, que transforma cada correção em aprendizado real e contínuo.</p>
-  <ul>
-    <li>Leitura criteriosa do texto</li>
-    <li>Identificação de tese, argumentos e estrutura</li>
-    <li>Análise de pontos fortes e fragilidades</li>
-    <li>Orientação clara do que deve ser melhorado</li>
-    <li>Reescrita guiada, com foco em clareza, coesão e argumentação</li>
-  </ul>
-</section>
+  <script src="./assets/js/index.js"></script>
 
-<!-- REDAÇÃO COMO VANTAGEM COMPETITIVA -->
-<section class="writing-advantage">
-  <h2>Redação como vantagem competitiva</h2>
-  <p>O estudante aprende a entender o que cada banca cobra, analisar redações nota máxima, planejar, escrever, revisar e dominar a tese e argumentação.</p>
-</section>
-
-<!-- MENTORIA INDIVIDUAL -->
-<section class="mentoria">
-  <h2>Mentoria Individual Gaivota</h2>
-  <p>O aluno é acompanhado de forma próxima, com foco em organização, acompanhamento da escrita, identificação de dificuldades e definição de metas.</p>
-  <ul>
-    <li>Organizar os estudos</li>
-    <li>Planejar e otimizar o tempo</li>
-    <li>Esclarecer dúvidas acadêmicas</li>
-    <li>Acompanhar desempenho</li>
-    <li>Refletir sobre escolhas de carreira e projeto de vida</li>
-  </ul>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta" id="matricula">
-  <h2>Seu futuro decola aqui ✈️</h2>
-  <a href="#" class="btn">Quero me matricular</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Cursinho Gaivota. Todos os direitos reservados.</p>
-</footer>
-
-<script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -1,166 +1,1240 @@
-/* Reset básico */
-* {margin: 0; padding: 0; box-sizing: border-box;}
-body {font-family: 'Inter', sans-serif; line-height: 1.6; color: #1B2A49;}
-a {text-decoration: none;}
-img {max-width: 100%; display: block;}
-section {padding: 60px 20px;}
+/* ================= RESET BÁSICO ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-/* Cores */
-:root {
-  --azul-escuro: #1B2A49;
-  --azul-medio: #3A4F7A;
-  --azul-claro: #E6EDF7;
-  --amarelo: #F9C311;
-  --branco: #FFFFFF;
-  --cinza-claro: #F8F8F8;
 }
 
-/* Botões */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+  background-color: #f9fafb;
+}
+
+/* ================= VARIÁVEIS DE COR ================= */
+:root {
+  --azul: #0f3c5c;
+  --azul-claro: #e6f1f8;
+  --amarelo: #f4c430;
+  --cinza: #f1f5f9;
+  --branco: #ffffff;
+  --texto-suave: #475569;
+  --bege: #FFF7E6;
+  --azul-bb:#DEEFFF;
+  --azul-mid: #a2caef;
+  --azul-mid2: #a9d5ff;
+}
+
+/* ================= BOTÕES ================= */
 .btn {
-  background-color: var(--amarelo);
-  color: var(--azul-escuro);
-  padding: 15px 30px;
-  font-weight: 700;
-  border-radius: 8px;
   display: inline-block;
+  background: var(--amarelo);
+  color: var(--azul);
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
 }
+
 .btn:hover {
-  background-color: var(--azul-escuro);
-  color: var(--branco);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
- 
-  background: url('/assets/img/bnn.ofc.jpeg');
-  color: var(--branco);
-  text-align: center;
-  padding: 120px 20px;
-  height: 800px;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(9, 45, 71, 0.456),
+    rgba(15, 60, 92, 0.548)
+  ),
+  url("../img/bnn.ofc.jpeg");
+  color: white;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero h1{
-    margin-top: 200px;
-    font-size: 50px;
-    font-weight: bold;
-}
-.hero p{
-    /* text-align: center; */
-    /* display: flex;
-    align-items: center; */
-    width: 600px;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-/* FAIXA DE DESTAQUE */
-.highlight {
-  background-color: var(--amarelo);
-  color: var(--azul-escuro);
+.hero p {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  color: var(--amarelo);
+  text-decoration: none;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+/* ================= FAIXA DE DESTAQUE ================= */
+/* .highlight {
+  background: var(--amarelo);
   display: flex;
   justify-content: space-around;
+  padding: 30px 10%;
   text-align: center;
-  padding: 40px 20px;
-  flex-wrap: wrap;
+  color: var(--azul);
 }
+
 .highlight div {
-  flex: 1 1 200px;
-  margin: 20px;
+  font-weight: bold;
 }
-.highlight div i {
+
+.highlight i {
   font-size: 2rem;
+  margin-bottom: 10px;
+} */
+
+/* ================= FAIXA DE DESTAQUE ================= */
+.highlight {
+  /* background: linear-gradient(135deg, var(--azul-bb), #0f2e5a); */
+  background-color: rgb(255, 232, 149);
+  padding: 70px 20px;
+}
+
+.highlight-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.highlight-card {
+  background: white;
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 35px 25px;
+  text-align: center;
+  color: rgb(0, 39, 123);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card i {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: var(--amarelo);
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+
+
+
+/* ================= SEÇÕES PADRÃO ================= */
+section {
+  padding: 80px 10%;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--azul);
+}
+
+/* ================= OBJETIVO ================= */
+/* .purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  background-color: var(--bege);
+}
+#objetivo-slogan{
+  font-size: 19px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.purpose img {
+  width: 100%;
+  border-radius: 20px;
+}
+.purpose-text h2{
+  margin-top: -70px;
+  font-size: 30px;
+}
+.purpose-text p{
+  font-size: 18px;
+} */
+
+
+.purpose {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 6%;
+  margin: 4rem 0;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #d7e4f9, #ffffff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* detalhe decorativo */
+.purpose::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(115, 176, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+}
+
+/* texto */
+.purpose-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--azul);
+}
+
+.purpose-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* slogan final */
+#objetivo-slogan {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--azul);
+  padding-left: 1rem;
+  border-left: 4px solid var(--azul);
+}
+
+/* imagem */
+.purpose img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  justify-self: center;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .purpose {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .purpose img {
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+/* CARDS-COMO O GAIVOTA ENSINA */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= COMO O GAIVOTA ENSINA ================= */
+
+.method {
+  background-color: var(--azul-bb);
+  padding: 90px 8%;
+}
+
+.method h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--azul);
   margin-bottom: 10px;
 }
 
-/* PROPÓSITO */
-.purpose {
-  background-color: var(--azul-claro); /* cor de fundo */
+.method .section-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 70px;
+  color: var(--azul);
+}
+
+/* STEPS */
+.method-steps {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.method-steps::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(255,255,255,0.3);
+}
+
+/* STEP */
+.step-1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.step-number {
+  min-width: 60px;
+  height: 60px;
+  background: var(--amarelo);
+  color: var(--azul-escuro);
+  font-weight: 700;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  color: var(--azul-escuro); /* texto escuro */
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 2;
 }
-.purpose-text {flex: 1 1 400px;}
-.purpose img {flex: 1 1 400px; border-radius: 12px;}
 
-/* METODOLOGIA */
-.cards {
+.step-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.step-content:hover {
+  transform: translateX(6px);
+}
+
+.step-content h3 {
+  margin-bottom: 10px;
+  color: var(--azul-escuro);
+}
+
+.step-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+
+  .method-steps::before {
+    left: 20px;
+  }
+
+  .step {
+    gap: 20px;
+  }
+
+  .step-content {
+    padding: 25px;
+  }
+}
+
+/* ================= CARDS ================= */
+
+.cards-mat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+
+.card-materia {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card-materia:hover {
+  transform: translateY(-8px);
+}
+
+.materia {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Remove a setinha padrão do summary */
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Ícone + / - */
+.icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Quando o card estiver aberto */
+.card-materia[open] .icon {
+  transform: rotate(180deg);
+}
+
+
+
+/* ================= DIFERENCIAL ================= */
+/* .differential ul {
+  list-style: none;
+}
+
+.differential li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.differential li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--amarelo);
+} */
+
+
+/* ================= DIFERENCIAL PEDAGÓGICO ================= */
+
+.differential {
+  background-color: #f5f8ff; /* azul bem clarinho */
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.differential h2 {
+  font-size: 2.3rem;
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.differential-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.diff-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 35px 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.diff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ÍCONE */
+.diff-card .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--amarelo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--azul-escuro);
+}
+
+/* TEXTO */
+.diff-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--azul-escuro);
+}
+
+.diff-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .differential {
+    padding: 60px 6%;
+  }
+}
+/* ================= MATÉRIAS ================= */
+.subjects {
+  background: var(--azul-mid);
+}
+
+
+/* ================= JUSTIFICATIVA DO FOCO ================= */
+
+.focus-why {
+  padding: 90px 8%;
+  background-color: rgb(220, 230, 245); /* neutro elegante */
+  color: #0b2c52;
+}
+
+.focus-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.focus-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--azul-escuro);
+}
+
+.focus-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* LISTA */
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focus-list li {
+  margin-bottom: 18px;
+  padding-left: 32px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.focus-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--amarelo);
+  font-weight: bold;
+}
+
+/* FRASE FINAL */
+.focus-highlight {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.15rem;
+}
+
+.focus-highlight strong {
+  color: var(--azul);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .focus-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .focus-highlight {
+    margin-top: 40px;
+    font-size: 1.05rem;
+  }
+}
+/* ================= REDAÇÃO ================= */
+/* .writing,
+.writing-advantage {
+  background: var(--cinza);
+} */
+
+
+/* ================= REDAÇÃO GAIVOTA ================= */
+
+.writing-focus {
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #0b2c52, #123c73);
+  color: #ffffff;
+}
+
+.writing-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+/* TEXTO PRINCIPAL */
+.writing-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.writing-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+
+.writing-process {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.writing-process li {
+  margin-bottom: 14px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.writing-process li::before {
+  content: "✍️";
+  position: absolute;
+  left: 0;
+}
+
+/* NOTA */
+.writing-note {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* BOX DE VANTAGEM */
+.writing-advantage-box {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 22px;
+  backdrop-filter: blur(6px);
+}
+
+.writing-advantage-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.writing-advantage-box p {
+  margin-bottom: 15px;
+}
+
+.writing-advantage-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.writing-advantage-box li {
+  margin-bottom: 12px;
+  padding-left: 26px;
+  position: relative;
+}
+
+.writing-advantage-box li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--amarelo);
+}
+
+.writing-result {
+  display: block;
+  margin-top: 25px;
+  font-weight: 600;
+  color: var(--amarelo);
+}
+
+/* FRASE FINAL */
+.writing-final {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .writing-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .writing-focus {
+    padding: 80px 6%;
+  }
+
+  .writing-text h2 {
+    font-size: 2rem;
+  }
+}
+
+.mentoria {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #dfebff, #eaf4ff);
+}
+
+.mentoria-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mentoria-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mentoria-icon {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.mentoria-header h2 {
+  font-size: 2.4rem;
+  color: #111b65;
+}
+
+.mentoria-header p {
+  color: #3f4c74;
+  margin-top: 10px;
+}
+
+.mentoria-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.mentoria-text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.mentoria-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.feature span {
+  font-size: 1.5rem;
+}
+
+.mentoria-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step h4 {
+  margin-bottom: 12px;
+  color: #082557;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 260px; /* evita linhas muito longas no desktop */
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .mentoria-content {
+    grid-template-columns: 1fr;
+  }
+
+  .mentoria-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .mentoria-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= PROFESSORES ================= */
+.teachers {
+  padding: 80px 20px;
+  background: #fff6d9;
+  text-align: center;
+}
+
+.teachers h2 {
+  font-size: 2.2rem;
+  color: #2f375c;
+}
+
+.teachers-sub {
+  max-width: 520px;
+  margin: 10px auto 50px;
+  color: #666;
+}
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  align-items: flex-start;
+}
+
+/* Card */
+.teacher-card {
+  background: #ffe68b;
+  padding: 30px 25px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.teacher-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Foto fake rosa */
+.teacher-photo {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #f5b1d4, #d9a7ff);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+/* Nome e área */
+.teacher-card h3 {
+  margin-bottom: 4px;
+  color: #00074f;
+}
+
+.teacher-area {
+  font-size: 0.9rem;
+  color: #1a4492;
+  font-weight: 500;
+}
+
+/* Descrição */
+.teacher-desc {
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Botão */
+.btn-more {
+  background: none;
+  border: none;
+  color: #0a40b4;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Conteúdo extra */
+.teacher-more {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.teacher-more ul {
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.teacher-more li {
+  margin-bottom: 8px;
+}
+
+/* Ativo */
+.teacher-card.active .teacher-more {
+  max-height: 500px;
+}
+
+
+/* ================= DEPOIMENTOS ================= */
+.testimonials blockquote {
+  background: var(--branco);
+  padding: 30px;
+  border-left: 6px solid var(--amarelo);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* ================= MAPA ================= */
+/* .map-box {
+  background: var(--cinza);
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-suave);
+} */
+
+/* ================= ONDE ESTAMOS ================= */
+.location {
+  background-color: var(--cinza-claro);
+  padding: 90px 20px;
+}
+
+.location-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.location-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.location-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.address-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--branco);
+  padding: 15px 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-weight: 500;
+}
+
+.address-box i {
+  color: var(--azul-bb);
+  font-size: 1.3rem;
+}
+
+/* MAPA */
+.map-box {
+  width: 100%;
+  height: 400px;
+  background: #eaeaea;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #666;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.map-box iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .location-container {
+    grid-template-columns: 1fr;
+  }
+
+  .map-box {
+    height: 260px;
+  }
+}
+
+/* ================= CTA ================= */
+/* .cta {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+  margin-bottom: 30px;
+} */
+
+/* ================= CHAMADA FINAL ================= */
+
+.final-cta {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  padding: 90px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.final-cta h2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.final-cta p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  margin-bottom: 35px;
+}
+
+.final-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
   flex-wrap: wrap;
 }
-.card {
-  background-color: var(--branco); /* fundo branco para cards */
-  color: var(--azul-escuro);
-  padding: 30px 20px;
-  border-radius: 12px;
-  flex: 1 1 250px;
-  min-width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+/* Botões */
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-/* DIFERENCIAL */
-.differential {
-  background-color: var(--cinza-claro); /* fundo cinza leve */
-  color: var(--azul-escuro);
+.btn-primary {
+  background: #ffca28; /* amarelo */
+  color: #0d47a1;
 }
 
-/* FOCO ESTRATÉGICO */
-.focus {
-  background-color: var(--branco);
-  color: var(--azul-escuro);
-}
-.focus .cards .card {
-  background-color: var(--azul-claro); /* cards dentro do foco */
-  color: var(--azul-escuro);
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* VANTAGENS DO FOCO */
-.advantages {
-  background-color: var(--azul-medio); /* bloco azul médio */
-  color: var(--branco);
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .final-cta h2 {
+    font-size: 2rem;
+  }
+
+  .final-cta p {
+    font-size: 1rem;
+  }
 }
 
-/* REDAÇÃO COMO DIFERENCIAL */
-.writing {
-  background-color: var(--amarelo); /* destaque amarelo */
-  color: var(--azul-escuro);
+
+
+/* ================= FOOTER ================= */
+/* footer {
+  background: #020617;
+  color: #cbd5f5;
+  padding: 50px 10%;
 }
 
-/* REDAÇÃO COMO VANTAGEM COMPETITIVA */
-.writing-advantage {
-  background-color: var(--cinza-claro);
-  color: var(--azul-escuro);
+.footer-content p {
+  margin-bottom: 10px;
 }
 
-/* MENTORIA INDIVIDUAL */
-.mentoria {
-  background-color: var(--azul-claro);
-  color: var(--azul-escuro);
+footer .copyright {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+} */
+.footer {
+  background-color: rgb(221, 231, 255); 
+  color: #00095b;
+  padding: 60px 20px 30px;
+  font-family: Arial, sans-serif;
 }
 
-/* CTA final */
-.cta {
-  background-color: var(--amarelo);
-  color: var(--azul-escuro);
+.footer-cta {
   text-align: center;
-  padding: 80px 20px;
+  margin-bottom: 50px;
 }
-.cta .btn {font-size: 1.2rem;}
 
-/* Footer */
-footer {
-  background-color: var(--azul-escuro);
-  color: var(--branco);
+.footer-cta h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-cta p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  max-width: 320px;
+  opacity: 0.85;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.footer-info a {
+  color: #00087a; /* lilás lindo */
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(95, 97, 117, 0.433);
+  padding-top: 20px;
   text-align: center;
-  padding: 40px 20px;
+  font-size: 14px;
+  opacity: 0.7;
 }
 
-/* Responsividade */
-@media (max-width: 768px){
-  .hero h1 {font-size: 2rem;}
-  .hero p {font-size: 1rem;}
-  .purpose {flex-direction: column;}
-  .highlight {flex-direction: column;}
-  .cards {flex-direction: column;}
+
+/* ================= ANIMAÇÃO DE SCROLL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .purpose {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
