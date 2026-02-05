@@ -1,60 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Cursinho Pré-Vestibular Gaivota</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="./assets/css/index.css">
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cursinho Gaivota</title>
+  <link rel="stylesheet" href="./src/css/index.css" />
 </head>
 <body>
 
-  <!-- MENU -->
-  <header class="header">
-    <div class="logo">Gaivota</div>
-
-    <nav class="nav">
-      <ul class="nav-list">
-        <li><a href="#home">Início</a></li>
-        <li><a href="pre-vestibular.html">O Curso</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
+  <!-- HEADER -->
+  <header class="top-header">
+    <div class="logo-mini">Cursinho Gaivota</div>
+    <a href="https://wa.me/5511971306497?text=Olá!%20Quero%20conhecer%20o%20Cursinho%20Gaivota."
+          target="_blank" class="btn-header">Contato</a>
   </header>
 
-  <!-- HERO HOME -->
-  <section class="home-hero" id="home">
-    <div class="home-overlay"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+    <!-- LOGO -->
+    <div class="hero-logo reveal delay-1">
+      <img src="./src/assets/img/Cursinho.Gaivota.png" alt="Logo Cursinho Gaivota">
+    </div>
 
-    <div class="home-content">
-      <h1>Cursinho Pré-Vestibular Gaivota</h1>
-      <p>
-        Preparação sólida, humana e estratégica para o ENEM e os principais vestibulares.
+    <!-- CONTEÚDO -->
+    
+
+      <h1 class="reveal delay-2">Seu futuro decola aqui</h1>
+
+      <p class="hero-description reveal delay-3">
+        O Cursinho Gaivota prepara estudantes com uma metodologia humana,
+        estratégica e focada em resultados reais nos principais vestibulares.
       </p>
 
-      <div class="home-buttons">
-        <a href="pre-vestibular.html" class="btn-primary">
-          Conhecer o Pré-Vestibular
-        </a>
+      <div class="hero-buttons reveal delay-4">
 
-        <a href="https://www.outrosite.com" target="_blank" class="btn-secondary">
-          Outro projeto
-        </a>
+        <div class="hero-card">
+          <a href="pre-vestibular.html" class="hero-btn primary">
+            Pré-vestibular
+          </a>
+          <p>Para quem busca aprovação no ENEM e vestibulares.</p>
+        </div>
+
+        <div class="hero-card">
+          <a href="https://site-pre-vestibulinho.com" target="_blank" class="hero-btn secondary">
+            Pré-vestibulinho
+          </a>
+          <p>Para estudantes do fundamental rumo às escolas técnicas.</p>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER SIMPLES -->
+  <!-- FOOTER -->
   <footer class="footer" id="contato">
-    <p>© 2026 — Cursinho Pré-Vestibular Gaivota</p>
+    <div class="footer-container">
+
+      <div>
+        <div class="footer-logo">Curso Gaivota</div>
+        <p>Educação com propósito, estratégia e acolhimento.</p>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <p>📍 Lapa, São Paulo</p>
+        <p>📞 (11) 97130-6497</p>
+        <p>📸 @cursogaivota</p>
+      </div>
+
+      <div>
+        <h4>Vamos conversar?</h4>
+        <a 
+          href="https://wa.me/5511971306497?text=Olá!%20Quero%20conhecer%20o%20Cursinho%20Gaivota."
+          target="_blank"
+          class="footer-btn"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Cursinho Gaivota — Todos os direitos reservados
+    </div>
   </footer>
 
-  <script src="./assets/js/index.js"></script>
-
+  <script src="./src/js/index.js"></script>
 </body>
 </html>

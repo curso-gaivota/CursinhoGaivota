@@ -1,3 +1,41 @@
+
+
+
+
+
+
+
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Abre e fecha menu
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+// Fecha menu ao clicar fora
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
+  }
+});
+
+// Fecha menu e rola para seção ao clicar no link
+const links = document.querySelectorAll('.nav-links a');
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
+});
 // ================= ANIMAÇÃO DE SCROLL =================
 const reveals = document.querySelectorAll(".reveal");
 
@@ -94,3 +132,4 @@ document.querySelectorAll('.teacher-card').forEach(card => {
       : 'Ver mais';
   });
 });
+
