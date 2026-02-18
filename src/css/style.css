@@ -68,6 +68,10 @@ body {
   color: #000;
 }
 
+.menu-toggle{
+  display: none;
+}
+
 /* BOTÃO HAMBURGUER */
 /* ================= MOBILE MENU ================= */
 /* MOBILE MENU */
