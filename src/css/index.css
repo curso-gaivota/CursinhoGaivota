@@ -44,17 +44,7 @@ body {
   font-weight: 600;
 }
 
-/* ================= HERO ================= */
-/* .hero {
-  min-height: 100vh;
-  position: relative;
-  background-image: url("../assets/img/bnn.abertura.png");
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 7rem 2rem 4rem; 
-  text-align: center;
-} */
+
 
 .hero {
   position: relative;
@@ -243,7 +233,7 @@ body {
 
   .hero-bg {
     background-image: url("../assets/img/bnn1.mobile.png");
-    /* background-position: center top; */
+    background-position: center;
   }
 
   .hero-content h1 {

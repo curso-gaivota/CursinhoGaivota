@@ -226,7 +226,7 @@ section {
   inset: 0;
   background-image: url("../assets/img/bnn.ofc.jpeg");
   background-size: cover;
- 
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -1359,7 +1359,7 @@ summary::-webkit-details-marker {
 
 @media (max-width: 768px) {
 
-  .hero {
+  .hero-bg {
     background: url("../assets/img/bnn2.mobile.png");
   }
 }
