@@ -226,7 +226,7 @@ section {
   inset: 0;
   background-image: url("../assets/img/bnn.ofc.jpeg");
   background-size: cover;
-  background-position: center;
+ 
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -244,13 +244,14 @@ section {
 
 .hero-content {
  
+    position: relative;
   z-index: 2;
   color: var(--branco);
-
- 
-
+  max-width: 900px;
+  width: 100%;
+  display: flex;
   flex-direction: column;
-
+  /* align-items: center; */
 } 
 
 
@@ -1355,11 +1356,8 @@ summary::-webkit-details-marker {
     flex-direction: column;
     gap: 20px;
   }
-}
-
-@media (max-width: 768px) {
-
   .hero-bg {
-    background: url("../assets/img/bnn2.mobile.png");
+    background-image: url("../assets/img/bnn2.mobile.png");
+    background-position: center;
   }
 }
