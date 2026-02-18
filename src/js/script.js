@@ -133,3 +133,15 @@ document.querySelectorAll('.teacher-card').forEach(card => {
   });
 });
 
+document.querySelectorAll(".read-more").forEach(button => {
+    button.addEventListener("click", function () {
+      const testimonial = this.parentElement;
+
+      testimonial.classList.toggle("active");
+
+      this.textContent = 
+        testimonial.classList.contains("active")
+        ? "Ler menos"
+        : "Ler mais";
+    });
+  });

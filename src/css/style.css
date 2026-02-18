@@ -1002,10 +1002,10 @@ summary::-webkit-details-marker {
 }
 
 /* Foto fake rosa */
-.teacher-photo {
+.teacher-photo img {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #f5b1d4, #d9a7ff);
+  
   border-radius: 50%;
   margin: 0 auto 15px;
 }
@@ -1071,6 +1071,40 @@ summary::-webkit-details-marker {
   border-left: 6px solid var(--amarelo);
   margin-bottom: 20px;
   border-radius: 10px;
+}
+.testimonial {
+  background: var(--branco);
+  padding: 30px;
+  border-left: 6px solid var(--amarelo);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+
+.read-more {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: var(--azul);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.more-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.testimonial.active .more-text {
+  max-height: 800px;
 }
 
 /* ================= ONDE ESTAMOS ================= */
