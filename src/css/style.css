@@ -236,8 +236,8 @@ section {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(11, 77, 184, 0.419),
-    rgba(11, 77, 184, 0.533)
+    rgba(11, 77, 184, 0.503),
+    rgba(24, 66, 134, 0.551)
   );
   z-index: 1;
 }
