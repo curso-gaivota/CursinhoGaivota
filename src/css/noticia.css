@@ -351,6 +351,83 @@ body{
 
 }
 
+.external-resource{
+
+    margin-top: 60px;
+
+}
+
+.resource-card{
+
+    background: #f7fbff;
+
+    border: 2px solid #d7e7ff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+.resource-icon{
+
+    font-size: 48px;
+
+}
+
+.resource-card h2{
+
+    margin: 20px 0 15px;
+
+    color: #123d8d;
+
+}
+
+.resource-card p{
+
+    max-width: 700px;
+
+    margin: 15px auto;
+
+    line-height: 1.7;
+
+    color: #444;
+
+}
+
+.resource-card .btn-primary{
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+}
+
+.material-badge{
+
+    display:inline-block;
+
+    background:#123d8d;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+
 /* =========================
    RESPONSIVO
 ========================= */
