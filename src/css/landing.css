@@ -98,7 +98,7 @@ body{
 
     border-radius:999px;
 
-    font-size:.85rem;
+    font-size:.99rem;
 
     font-weight:700;
 
@@ -151,7 +151,9 @@ body{
 
     font-size:2rem;
 
-    margin-bottom:15px;
+    margin-bottom:10px;
+
+    line-height: 1.2;
 
 }
 
