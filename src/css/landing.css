@@ -156,10 +156,11 @@ body{
 }
 
 .hero-highlight a{
+    margin-top: 5px;
 
     color:#1B98E0;
 
-    font-weight:700;
+    font-weight:800;
 
     text-decoration:none;
 
