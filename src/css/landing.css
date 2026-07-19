@@ -1,286 +1,467 @@
 /* =========================
+   VARIÁVEIS DE CORES
+========================= */
+
+:root{
+
+    --azul-principal:#012F86;
+    --azul-antigo:#083D77;
+
+    --azul-claro:#A9C1F8;
+    --azul-soft:#D0E6FE;
+
+    --roxo:#4E52D0;
+
+    --verde-soft:#D9ECD6;
+    --verde:#5EAE52;
+
+    --laranja:#F2A81A;
+
+    --amarelo-antigo:#FFE347;
+
+    --texto:#363020;
+
+    --branco:#FFFFFF;
+
+    --fundo:#F9FBFC;
+
+}
+
+
+
+
+
+/* =========================
    RESET
 ========================= */
 
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
+
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
+
     font-family:'Montserrat',sans-serif;
-    background:#F9FBFC;
-    color:#363020;
+
+    background:var(--fundo);
+
+    color:var(--texto);
+
     line-height:1.6;
+
     overflow-x:hidden;
+
 }
 
-.btn-whatsapp {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
 
-    width: 64px;
-    height: 64px;
 
-    border-radius: 50%;
-    background: #25D366;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    box-shadow: 0 4px 12px rgba(0,0,0,.3);
 
-    z-index: 1000;
+/* =========================
+   REVEAL ANIMATION
+========================= */
 
-    transition: transform .3s ease;
 
-    animation: pulse 2s infinite;
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .6s ease;
+
 }
 
-.btn-whatsapp:hover {
-    transform: scale(1.08);
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
 }
 
-.btn-whatsapp img {
-    width: 34px;
-    height: 34px;
+
+
+
+
+
+/* =========================
+   BOTÃO WHATSAPP
+========================= */
+
+
+.btn-whatsapp{
+
+
+    position:fixed;
+
+    bottom:24px;
+
+    right:24px;
+
+
+    width:64px;
+
+    height:64px;
+
+
+    border-radius:50%;
+
+
+    background:#25D366;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+
+
+    z-index:1000;
+
+
+    transition:.3s;
+
+
+    animation:pulse 2s infinite;
+
+
 }
+
+
+
+.btn-whatsapp:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.btn-whatsapp img{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+
+
+
+
+
 
 /* =========================
    HERO
 ========================= */
 
-/* estado inicial (invisível) */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.6s ease;
-}
-
-/* quando ativa */
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 .hero{
 
+
     min-height:100vh;
+
 
     padding:80px 10%;
 
+
     display:grid;
+
 
     grid-template-columns:1.3fr .9fr;
 
+
     gap:50px;
+
 
     align-items:center;
 
+
+
     background:
+
     linear-gradient(
+
         135deg,
-        #C5E7E2 0%,
+
+        var(--azul-soft) 0%,
+
         #ffffff 100%
+
     );
 
+
 }
+
+
+
+
+
 
 .hero-content h1{
 
+
     font-size:4rem;
+
 
     line-height:1.05;
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
 
     margin-bottom:25px;
 
+
     font-weight:800;
 
+
 }
+
+
+
+
 
 .hero-content p{
 
+
     font-size:1.1rem;
+
 
     max-width:650px;
 
+
     margin-bottom:35px;
+
 
     color:#555;
 
+
 }
+
+
+
+
 
 .tag{
 
+
     display:inline-block;
 
-    background:#083D77;
+
+    background:var(--azul-principal);
+
 
     color:white;
 
+
     padding:10px 18px;
 
+
     border-radius:999px;
+
 
     font-size:.99rem;
 
+
     font-weight:700;
+
 
     margin-bottom:25px;
 
+
 }
 
+
+
+
+
+
+
 /* =========================
-   HERO DESTAQUE
+   CARD DESTAQUE HERO
 ========================= */
-/* 
+
+
 .hero-highlight{
+
 
     background:white;
 
+
     padding:40px;
+
 
     border-radius:24px;
 
+
     box-shadow:
+
     0 20px 50px rgba(0,0,0,.08);
 
-    border-top:8px solid #FFE347;
+
+
+    border-top:8px solid var(--laranja);
+
+
+
+    display:flex;
+
+    flex-direction:column;
+
 
 }
 
-.highlight-badge{
 
-    display:inline-block;
 
-    background:#FFE347;
 
-    color:#083D77;
-
-    padding:8px 14px;
-
-    border-radius:999px;
-
-    font-size:.8rem;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-}
-
-.hero-highlight a{
-
-    color:#083D77;
-
-    font-size:1.1rem;
-
-    margin-bottom:10px;
-
-    line-height: 1.2;
-
-    text-decoration: none;
-
-    flex-direction: column;
-
-} */
-
-/* .hero-highlight a{
-    margin-top: 5px;
-
-    color:#1B98E0;
-
-    font-weight:800;
-
-    text-decoration:none;
-
-} */
-
-.hero-highlight{
-
-    background: white;
-    padding: 40px;
-    border-radius: 24px;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.08);
-
-    border-top: 8px solid #FFE347;
-
-    display: flex;
-    flex-direction: column;
-}
 
 .hero-highlight h3{
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
+
     margin:0 0 20px;
+
+
     font-size:1.5rem;
 
+
 }
+
+
+
+
 
 .highlight-links{
 
+
     display:flex;
+
+
     flex-direction:column;
+
 
     gap:14px;
 
+
+
     max-height:260px;
+
+
     overflow-y:auto;
+
 
     padding-right:8px;
 
+
 }
+
+
+
+
 
 .hero-highlight a{
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
+
     text-decoration:none;
+
 
     padding:12px 16px;
 
+
     border-radius:12px;
+
 
     background:#F8F9FA;
 
+
     transition:.3s;
+
 
     font-weight:500;
 
+
 }
+
+
+
+
 
 .hero-highlight a:hover{
 
-    background:#FFE347;
+
+    background:var(--azul-claro);
+
+
     transform:translateX(5px);
 
+
 }
+
+
+
+
 
 .highlight-links::-webkit-scrollbar{
+
+
     width:6px;
+
+
 }
+
+
 
 .highlight-links::-webkit-scrollbar-thumb{
-    background:#FFE347;
+
+
+    background:var(--laranja);
+
+
     border-radius:999px;
+
+
 }
 
+
+
 .highlight-links::-webkit-scrollbar-track{
+
+
     background:transparent;
+
+
 }
 
 /* =========================
    BOTÕES
 ========================= */
+
 
 .hero-buttons{
 
@@ -292,315 +473,998 @@ body{
 
 }
 
+
+
+
+
 .btn-primary{
 
-    background:#083D77;
+
+    background:var(--azul-principal);
+
 
     color:white;
 
+
     padding:15px 28px;
+
 
     border-radius:14px;
 
+
     text-decoration:none;
 
+
     font-weight:700;
+
 
     transition:.3s;
 
+
 }
+
+
+
 
 .btn-primary:hover{
 
-    background:#1B98E0;
+
+    background:var(--roxo);
+
 
     transform:translateY(-4px);
 
+
 }
+
+
+
+
 
 .btn-secondary{
 
+
     background:white;
 
-    border:2px solid #083D77;
 
-    color:#083D77;
+    border:2px solid var(--azul-principal);
+
+
+    color:var(--azul-principal);
+
 
     padding:15px 28px;
 
+
     border-radius:14px;
+
 
     text-decoration:none;
 
+
     font-weight:700;
 
+
 }
+
+
+
+
 
 /* =========================
-   DESTAQUE
+   SEÇÕES GERAIS
 ========================= */
 
-.featured-section{
-
-    padding:70px 10%;
-
-}
-
-.featured-card{
-
-    background:#083D77;
-
-    color:white;
-
-    padding:50px;
-
-    border-radius:25px;
-
-}
-
-.featured-card h2{
-
-    font-size:2.5rem;
-
-    margin-bottom:15px;
-
-}
-
-/* =========================
-   SEÇÕES
-========================= */
 
 .section{
 
+
     padding:100px 10%;
 
-}
-
-.section-soft{
-
-    background:#C5E7E2;
 
 }
 
-.section-dark{
 
-    background:#083D77;
 
-    color:white;
 
-}
 
 .section-title{
 
+
     text-align:center;
+
 
     margin-bottom:60px;
 
+
 }
+
+
+
+
 
 .section-title h2{
 
+
     font-size:3rem;
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
 
     margin-bottom:15px;
 
+
 }
 
-.section-dark .section-title h2{
+
+
+
+
+.section-title p{
+
+
+    max-width:700px;
+
+
+    margin:auto;
+
+
+}
+
+/* ===========================
+card meo
+==============================*/
+/* 
+.guide-card{
+    text-align: center;
+
+    width: 600px;
+} */
+
+
+
+
+/* =========================
+   FUNDOS DAS SEÇÕES
+========================= */
+
+
+.section-soft{
+
+
+    background:var(--verde-soft);
+
+
+}
+
+
+
+
+.section-blue{
+
+
+    background:var(--azul-soft);
+
+
+}
+
+
+
+
+
+.section-purple{
+
+
+    background:#EEF0FF;
+
+
+}
+
+
+
+
+
+.section-green{
+
+
+    background:var(--verde-soft);
+
+
+}
+
+
+
+
+
+.section-orange{
+
+
+    background:#FFF1D6;
+
+
+}
+
+
+
+
+
+.section-dark{
+
+
+    background:var(--azul-principal);
+
 
     color:white;
 
+
 }
+
+
+
+
+
+.section-dark .section-title h2{
+
+
+    color:white;
+
+
+}
+
+
+/* ===================== largura dos cards solitarios */
+
+/* .single-card{
+    display:grid;
+    justify-content:center;
+    grid-template-columns: 600px;
+}
+
+
+.single-card .guide-card{
+    width:100%;
+    max-width:600px;
+}
+
+.single-card .test-card{
+     width:100%;
+    max-width:600px;
+}
+
+ */
+
+
+/* =========================
+   CORES INDIVIDUAIS
+   DAS NOVAS SEÇÕES
+========================= */
+
+
+/* Organização */
+
+#organizacao{
+
+
+    background:#EEF0FF;
+
+
+}
+
+
+
+
+
+#organizacao .test-card{
+
+
+    border-top:6px solid var(--roxo);
+    
+
+
+}
+
+
+
+
+
+#organizacao .test-card a{
+
+
+    background:var(--roxo);
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+/* Preparação */
+
+
+#preparacao{
+
+
+    background:var(--azul-soft);
+
+
+}
+
+
+
+
+
+#preparacao .test-card{
+
+
+    border-top:6px solid var(--azul-principal);
+
+
+}
+
+
+
+
+
+
+#preparacao .test-card a{
+
+
+    background:var(--azul-principal);
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+/* Profissão */
+
+
+#profissao{
+
+
+    background:var(--verde-soft);
+
+
+}
+
+
+
+
+
+#profissao .test-card{
+
+
+    border-top:6px solid var(--verde);
+
+
+}
+
+
+
+
+
+#profissao .test-card a{
+
+
+    background:var(--verde);
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+/* ENEM */
+
+
+#enem{
+
+
+    background:var(--azul-soft);
+
+
+}
+
+
+
+
+
+#enem .guide-card{
+
+
+    border-top:6px solid var(--azul-principal);
+
+
+}
+
+
+
+
+
+
+
+/* FUVEST */
+
+
+#fuvest{
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+#fuvest .guide-card{
+
+
+    border-top:6px solid var(--laranja);
+
+
+}
+
+
+
+
+
+
+
+/* UNICAMP */
+
+
+#unicamp{
+
+
+    background:var(--verde-soft);
+
+
+}
+
+
+
+
+
+#unicamp .guide-card{
+
+
+    border-top:6px solid var(--verde);
+
+
+}
+
+
+
+
+
+
+
+/* TRI */
+
+
+#tri{
+
+
+    background:#EAF6E7;
+
+
+}
+
+
+
+
+
+#tri .guide-card{
+
+
+    border-top:6px solid var(--verde);
+
+
+}
+
+
+
+
+
+
+
+/* SIMULADOS */
+
+
+#simulados{
+
+
+    background:#FFF1D6;
+
+
+}
+
+
+
+
+
+#simulados .guide-card{
+
+
+    border-top:6px solid var(--laranja);
+
+
+}
+
 
 /* =========================
    GUIAS
 ========================= */
 
+
 .guide-grid{
 
+
     display:grid;
+
 
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
+
     gap:25px;
 
+
 }
+
+.guide-grid-single{
+    grid-template-columns: minmax(320px,600px);
+    justify-content: center;
+}
+
+
+
+
 
 .guide-card{
 
+
     background:white;
+
 
     padding:35px;
 
+
     border-radius:20px;
 
+
     box-shadow:
+
     0 10px 30px rgba(0,0,0,.06);
+
+
 
     transition:.3s;
 
-    text-decoration: none;
 
-    color: inherit;
+    text-decoration:none;
 
-    display: block;
+
+    color:inherit;
+
+
+    display:block;
+
 
 }
+
+
+
+
 
 .guide-card:hover{
 
+
     transform:translateY(-8px);
 
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.12);
+
+
 }
+
+
+
+
+
 
 .guide-card h3{
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
 
     margin-bottom:10px;
 
+
 }
+
+
+
+
+
+
+.guide-card p{
+
+
+    color:#555;
+
+
+}
+
+
+
+
+
 
 /* =========================
    TESTES
 ========================= */
 
+
 .test-grid{
+
 
     display:grid;
 
+
     grid-template-columns:
+
     repeat(auto-fit,minmax(280px,1fr));
+
 
     gap:25px;
 
+
 }
+
+.test-grid-single{
+    grid-template-columns: minmax(320px,600px);
+    justify-content: center;
+}
+
+
+
+
 
 .test-card{
 
+
     background:white;
+
 
     padding:35px;
 
+
     border-radius:20px;
+
 
     text-align:center;
 
+
     box-shadow:
+
     0 10px 30px rgba(0,0,0,.08);
 
+
+
+    transition:.3s;
+
+
 }
+
+
+
+
+
+.test-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+
+
 
 .test-icon{
 
+
     font-size:2rem;
+
 
     display:block;
 
+
     margin-bottom:15px;
 
+
 }
+
+
+
+
 
 .test-card h3{
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
 
     margin-bottom:12px;
 
+
 }
+
+
+
+
+
+.test-card p{
+
+
+    color:#555;
+
+
+}
+
+
+
+
 
 .test-card a{
 
+
     display:inline-block;
+
 
     margin-top:20px;
 
-    background:#FFE347;
 
-    color:#083D77;
+    background:var(--laranja);
+
+
+    color:var(--azul-principal);
+
 
     text-decoration:none;
 
+
     font-weight:700;
+
 
     padding:10px 18px;
 
+
     border-radius:10px;
 
+
+    transition:.3s;
+
+
 }
+
+
+
+
+
+.test-card a:hover{
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
 
 /* =========================
    NOTÍCIAS
 ========================= */
 
+
 .news-layout{
+
 
     display:grid;
 
+
     grid-template-columns:2fr 1fr;
+
 
     gap:25px;
 
-    
 
 }
+
+
+
+
+
 
 .news-featured{
 
-    background:#083D77;
+
+    background:var(--azul-principal);
+
 
     color:white;
 
-    text-decoration: none;
+
+    text-decoration:none;
+
+
     padding:40px;
+
 
     border-radius:24px;
 
+
+    transition:.3s;
+
+
 }
+
+
+
+
+
+.news-featured:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
 
 .news-featured span{
 
-    
-    color:#FFE347;
+
+    color:var(--laranja);
+
 
     font-weight:700;
 
+
 }
 
+
+
+
+
+
 .news-featured h3{
-    text-decoration: none;
+
 
     font-size:2rem;
 
+
     margin:15px 0;
 
+
 }
+
+
+
+
+
+.news-featured p{
+
+
+    color:#F1F1F1;
+
+
+}
+
+
+
+
+
 
 .news-side{
 
-    text-decoration: none;
+
     display:flex;
+
 
     flex-direction:column;
 
+
     gap:20px;
+
 
 }
 
+
+
+
+
+
 .news-mini{
-    text-decoration: none;
+
 
     background:white;
 
+
     padding:25px;
 
+
     border-radius:18px;
-    color: inherit;
+
+
+    color:inherit;
+
+
+    text-decoration:none;
+
+
     box-shadow:
+
     0 8px 20px rgba(0,0,0,.06);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.news-mini:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+.news-mini h4{
+
+
+    color:var(--azul-principal);
+
 
 }
 
@@ -608,215 +1472,858 @@ body{
    TIMELINE
 ========================= */
 
+
 .timeline{
+
 
     display:grid;
 
+
     grid-template-columns:
+
     repeat(4,1fr);
+
 
     gap:25px;
 
+
 }
+
+
+
+
+
 
 .timeline-item{
 
+
     background:white;
 
-    color:#363020;
+
+    color:var(--texto);
+
 
     padding:30px;
 
+
     border-radius:18px;
+
 
     text-align:center;
 
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.06);
+
+
 }
+
+
+
+
 
 .timeline-item span{
 
+
     width:60px;
+
 
     height:60px;
 
+
     display:flex;
+
 
     align-items:center;
 
+
     justify-content:center;
+
 
     margin:auto auto 15px;
 
+
     border-radius:50%;
 
-    background:#FFE347;
 
-    color:#083D77;
+    background:var(--laranja);
+
+
+    color:var(--azul-principal);
+
 
     font-weight:800;
 
+
 }
+
+
+
+
+
+.timeline-item h3{
+
+
+    color:var(--azul-principal);
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
 
 /* =========================
    CTA
 ========================= */
 
+
 .cta{
 
-    background:#FFE347;
+
+    background:var(--laranja);
+
 
     text-align:center;
 
+
     padding:120px 10%;
 
+
 }
+
+
+
+
+
 
 .cta h2{
 
-    color:#083D77;
+
+    color:var(--azul-principal);
+
 
     font-size:3rem;
 
+
     margin-bottom:15px;
 
+
 }
+
+
+
+
+
 
 .cta p{
 
+
     max-width:700px;
+
 
     margin:auto auto 35px;
 
+
 }
+
+
+
+
+
+.cta .btn-primary{
+
+
+    background:var(--azul-principal);
+
+
+}
+
+
+
+
+
+.cta .btn-primary:hover{
+
+
+    background:white;
+
+
+    color:var(--azul-principal);
+
+
+}
+
+
+
+
+
 
 /* =========================
    FOOTER
 ========================= */
 
+
 footer{
 
-    background:#363020;
+
+    background:var(--texto);
+
 
     color:white;
 
+
     text-align:center;
+
 
     padding:35px;
 
+
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37,211,102,.6);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37,211,102,0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37,211,102,0);
-    }
-}
+
+
+
 
 /* =========================
-   RESPONSIVO
+   ANIMAÇÃO WHATSAPP
 ========================= */
 
-@media(max-width:900px){
+
+@keyframes pulse {
+
+
+    0% {
+
+
+        box-shadow:
+
+        0 0 0 0 rgba(37,211,102,.6);
+
+
+    }
+
+
+
+    70% {
+
+
+        box-shadow:
+
+        0 0 0 15px rgba(37,211,102,0);
+
+
+    }
+
+
+
+    100% {
+
+
+        box-shadow:
+
+        0 0 0 0 rgba(37,211,102,0);
+
+
+    }
+
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+
+@media(max-width:1100px){
+
 
     .hero{
 
-        grid-template-columns:1fr;
-
-    }
-
-    .news-layout{
 
         grid-template-columns:1fr;
 
+
+        text-align:center;
+
+
+        padding:80px 8%;
+
+
     }
+
+
+
+    .hero-content{
+
+
+        display:flex;
+
+
+        flex-direction:column;
+
+
+        align-items:center;
+
+
+    }
+
+
+
+
+    .hero-highlight{
+
+
+        max-width:600px;
+
+
+        width:100%;
+
+
+        margin:auto;
+
+
+    }
+
+
 
     .timeline{
 
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:repeat(2,1fr);
+
 
     }
 
+
+
 }
+
+
+
+
+
 
 @media(max-width:768px){
 
 
 
-    .hero{
-        min-height: 80vh;
-        padding:70px 8%;
-    
+    /* =========================
+       GERAL
+    ========================= */
 
-    }
-      .btn-whatsapp {
-        width: 54px;
-        height: 54px;
 
-        bottom: 16px;
-        right: 16px;
-    }
-
-    .btn-whatsapp img {
-        width: 28px;
-        height: 28px;
-    }
     .section{
 
-        padding:80px 8%;
+
+        padding:70px 8%;
+
 
     }
 
-    .hero-content h1{
-        align-items: center;
-    
-        font-size:2.1rem;
+
+
+
+    .section-title{
+
+
+        margin-bottom:40px;
+
 
     }
+
+
+
 
     .section-title h2{
 
+
+        font-size:2.1rem;
+
+
+        line-height:1.2;
+
+
+    }
+
+
+
+
+    .section-title p{
+
+
+        font-size:.95rem;
+
+
+    }
+
+
+
+
+
+
+    /* =========================
+       HERO MOBILE
+    ========================= */
+
+
+    .hero{
+
+
+        min-height:auto;
+
+
+        padding:60px 8% 80px;
+
+
+        gap:40px;
+
+
+    }
+
+
+
+
+
+    .hero-content h1{
+
+
         font-size:2.2rem;
 
-    }
 
-    .featured-card h2{
+        line-height:1.15;
 
-        font-size:2rem;
 
     }
 
-    .timeline{
 
-        grid-template-columns:1fr;
+
+
+    .hero-content p{
+
+
+        font-size:1rem;
+
 
     }
+
+
+
+
+    .tag{
+
+
+        font-size:.8rem;
+
+
+        padding:8px 14px;
+
+
+    }
+
+
+
+
+
+
+    .hero-highlight{
+
+
+        padding:24px;
+
+
+        border-radius:20px;
+
+
+    }
+
+
+
+
+
+    .hero-highlight h3{
+
+
+        font-size:1.2rem;
+
+
+    }
+
+
+
+
+    .highlight-links{
+
+
+        max-height:none;
+
+
+        gap:10px;
+
+
+    }
+
+
+
+
+    .hero-highlight a{
+
+
+        font-size:.9rem;
+
+
+        padding:11px 12px;
+
+
+    }
+
+
+
+
+
+
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
 
     .hero-buttons{
 
+
         flex-direction:column;
 
+
+        width:100%;
+
+
     }
+
+
+
+
+
+    .btn-primary,
+    .btn-secondary{
+
+
+        width:100%;
+
+
+        text-align:center;
+
+
+        padding:14px 20px;
+
+
+    }
+
+
+
+
+
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+
+    .guide-grid,
+    .test-grid{
+
+
+        grid-template-columns:1fr;
+
+
+        gap:18px;
+
+
+    }
+
+
+
+
+
+
+
+    .guide-card,
+    .test-card{
+
+
+        padding:28px;
+
+
+        border-radius:18px;
+
+
+    }
+
+
+
+
+
+
+    .guide-card h3{
+
+
+        font-size:1.15rem;
+
+
+    }
+
+
+
+
+
+
+
+    .test-icon{
+
+
+        font-size:1.8rem;
+
+
+    }
+
+
+
+
+
+
+
+    /* =========================
+       NOTÍCIAS
+    ========================= */
+
+
+    .news-layout{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+    .news-featured{
+
+
+        padding:28px;
+
+
+    }
+
+
+
+
+
+    .news-featured h3{
+
+
+        font-size:1.5rem;
+
+
+    }
+
+
+
+
+
+    .news-mini{
+
+
+        padding:20px;
+
+
+    }
+
+
+
+
+
+
+
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+
+    .timeline{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+
+
+    .timeline-item{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+
+
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+
+    .cta{
+
+
+        padding:80px 8%;
+
+
+    }
+
+
+
+
+    .cta h2{
+
+
+        font-size:2rem;
+
+
+        line-height:1.2;
+
+
+    }
+
+
+
+
+    .cta p{
+
+
+        font-size:.95rem;
+
+
+    }
+
+
+
+
+
+
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+
+    .btn-whatsapp{
+
+
+        width:56px;
+
+
+        height:56px;
+
+
+        bottom:16px;
+
+
+        right:16px;
+
+
+    }
+
+
+
+
+
+    .btn-whatsapp img{
+
+
+        width:28px;
+
+
+        height:28px;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+@media(max-width:400px){
+
+
+
+    .hero-content h1{
+
+
+        font-size:1.9rem;
+
+
+    }
+
+
+
+
+
+    .section-title h2{
+
+
+        font-size:1.8rem;
+
+
+    }
+
+
+
+
+
     .hero-highlight{
-        margin-top: -30px;
-        padding:24px;
+
+
+        padding:20px;
+
+
     }
 
-    .hero-highlight h3{
-        font-size:1.2rem;
-    }
 
-    .highlight-links{
-        max-height:220px;
-    }
+
 
     .hero-highlight a{
-        font-size:.95rem;
+
+
+        font-size:.85rem;
+
+
     }
-    }
+
+
+
 
 }
