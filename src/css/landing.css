@@ -259,6 +259,21 @@ body{
 
 }
 
+/* =========================
+   LOGO HERO
+========================= */
+
+.hero-logo{
+    margin-bottom:18px;
+}
+
+.hero-logo img{
+    width:180px;
+    height:auto;
+    display:block;
+
+    filter: drop-shadow(0 10px 18px rgba(1,47,134,.12));
+}
 
 
 
@@ -2300,14 +2315,19 @@ footer{
 
     }
 
+    .hero-logo{
+    display:flex;
+    justify-content:center;
+    }
 
-
-
+    .hero-logo img{
+    width:100px;
+    }
 
     .hero-highlight{
 
 
-        padding:20px;
+        padding:12px;
 
 
     }

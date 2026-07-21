@@ -179,6 +179,82 @@ body{
 }
 
 /* =========================
+   CARD ENTRE CONTEÚDOS
+========================= */
+
+.content-callout{
+
+    max-width:700px;
+
+    margin:60px auto;
+
+    padding:28px;
+
+    background:linear-gradient(
+        135deg,
+        var(--azul-soft),
+        #ffffff
+    );
+
+    border:2px solid var(--azul-claro);
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.content-callout h3{
+
+    color:var(--azul-principal);
+
+    font-size:1.6rem;
+
+    margin-bottom:14px;
+
+}
+
+.content-callout p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+}
+
+.content-callout-btn{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    background:var(--laranja);
+
+    color:var(--azul-principal);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.content-callout-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#ffc94d;
+
+}
+
+/* =========================
    LISTAS
 ========================= */
 
